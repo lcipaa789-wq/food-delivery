@@ -3,14 +3,14 @@ import { menu_list } from "../assets/assets";
 
 const ExploreMenu = ({ category, setCategory }) => {
   return (
-    <div className="flex flex-col gap-5" id="explore-menu">
+    <div id="explore-menu" className="flex flex-col gap-5">
       <h1 className=" text-2xl text-[#262626] font-medium">Explore menu</h1>
       <p className="max-w-[60%] text-gray-500 ">
         Choose from a diverse menu featuring a delictable array of dishes
         dicrafted with the finest ingredients and culinary expertise, one
         delicious meal at a time
       </p>
-      <div className="flex justify-between items-center gap-7.5 text-center my-5 overflow-scroll ">
+      <div className="flex justify-between items-center gap-7.5 text-center my-5 overflow-auto ">
         {menu_list.map((item, index) => {
           return (
             <div
@@ -25,13 +25,13 @@ const ExploreMenu = ({ category, setCategory }) => {
               <img
                 className={
                   category === item.menu_name
-                    ? "border-4 border-[tomato] p-[2px] rounded-full "
-                    : ""
+                    ? "border-4 border-[tomato] p-0.5 rounded-full block"
+                    : "block"
                 }
                 src={item.menu_image}
                 alt=""
               />
-              <p className="mt-[10px] text-gray-400 text-xl cursor-pointer">
+              <p className="mt-2.5 text-gray-400 text-xl cursor-pointer">
                 {item.menu_name}
               </p>
             </div>

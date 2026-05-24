@@ -1,7 +1,88 @@
-import React from "react";
+import React, { useContext } from "react";
+import { StoreContext } from "../context/StoreContext";
 
 const Cart = () => {
-  return <div>Cart</div>;
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
+    useContext(StoreContext);
+  return (
+    <div className="mt-25 ">
+      <div className="cartITems">
+        <div className="grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] items-center text-gray-500 text-[max(1vw,12px)]">
+          <p>Items</p>
+          <p>title</p>
+          <p>price</p>
+          <p>quantity</p>
+          <p>total</p>
+          <p>remove</p>
+        </div>
+        <br />
+        <hr />
+        {food_list.map((item, index) => {
+          if (cartItems[item._id] > 0) {
+            return (
+              <div>
+                <div className="grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] items-center  text-[max(1vw,12px)] my-2.5 text-gray-800">
+                  <img className="w-12" src={item.image} alt="" />
+                  <p>{item.name}</p>
+                  <p>${item.price}</p>
+                  <p>{cartItems[item._id]}</p>
+                  <p>${item.price * cartItems[item._id]}</p>
+                  <p
+                    onClick={() => removeFromCart(item._id)}
+                    className="cursor-pointer"
+                  >
+                    x
+                  </p>
+                </div>
+                <hr className="h-px bg-gray-300 border-none" />
+              </div>
+            );
+          }
+        })}
+      </div>
+      <div className="mt-20 flex justify-between gap-[max(12vw,20px)]">
+        <div className="flex-1 flex flex-col gap-5 ">
+          <h2>Cart total</h2>
+          <div>
+            <div className="flex justify-between text-gray-600">
+              <p>Subtotal</p>
+              <p>${getTotalCartAmount()}</p>
+            </div>
+            <hr className="my-2.5" />
+            <div className="flex justify-between text-gray-600">
+              <p>Delivery fee</p>
+              <p>${2}</p>
+            </div>
+            <hr className="my-2.5" />
+            <div className="flex justify-between text-gray-600">
+              <p>Total</p>
+              <p>${getTotalCartAmount() + 2}</p>
+            </div>
+          </div>
+          <button className="border-none text-white bg-red-500 w-[max(15vw,200px)] py-3 rounded-2xl cursor-pointer">
+            PROCEED TO CHECKOUT
+          </button>
+        </div>
+        <div className="flex-1">
+          <div>
+            <p className="text-gray-500 ">
+              If you hace a promo code, Enter it here
+            </p>
+            <div className="mt-2 flex justify-between items-center bg-[#eaeaea] rounded-2xl">
+              <input
+                className="bg-transparent border-none outline-none pl-2.5"
+                type="text"
+                placeholder="promo code"
+              />
+              <button className="w-[max(10vw,150px)] py-3 px-[5] bg-black border-none text-white rounded-2xl">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Cart;
