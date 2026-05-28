@@ -1,24 +1,12 @@
-import userModel from "../models/userModel.js"
+import userModel from "../models/userModel.js";
 
-
-//add items to user cart 
-const addToCart =async (req,res) =>{
-
-
-
-
-}
-
-
+//add items to user cart
+const addToCart = async (req, res) => {};
 
 //remove items from user cart
-const removeFromCart = async (req, res)=>{
-
-}
-
+const removeFromCart = async (req, res) => {};
 
 //fetch user care data
-const getCart = async (req,res ) =>{}
+const getCart = async (req, res) => {};
 
-
-export (addToCart, removeFromCart, getCart) 
+export { addToCart, removeFromCart, getCart };
