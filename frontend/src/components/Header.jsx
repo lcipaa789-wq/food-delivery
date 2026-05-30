@@ -3,8 +3,8 @@ import React from "react";
 const Header = () => {
   return (
     <div
-      className="h-[34vw] my-7.5 mx-auto bg-contain bg-center bg-no-repeat relative"
-      style={{ backgroundImage: "url('/header_img.png')" }}
+      className="h-[34vw] my-7.5 mx-auto bg-cover bg-center bg-no-repeat relative rounded-3xl overflow-hidden"
+      style={{ backgroundImage: "url('/image.png')" }}
     >
       <div className="absolute flex flex-col items-start gap-[1.5vw] max-w-[50%] bottom-[10%] left-[6vw] animate-fadeIn">
         <h2 className="font-bold text-white text-6xl">

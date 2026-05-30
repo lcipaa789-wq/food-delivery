@@ -16,7 +16,7 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className="py-5 px-0 flex justify-between items-center">
       <Link to="/">
-        <img src={assets.logo} className="w-37.5 " />
+        <img src={assets.logo2} className="w-30" />
       </Link>
       <ul className="flex list-none gap-5 text-[#49557e] text-[18px]  ">
         <Link

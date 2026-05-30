@@ -22,7 +22,7 @@ const Footer = () => {
         "
         >
           <div className="flex flex-col gap-5">
-            <img src={assets.logo} alt="" className="w-37.5" />
+            <img src={assets.logo2} alt="" className="w-37.5" />
 
             <p className="text-[15px] leading-6">
               Delicious food delivered fast to your doorstep. Explore a wide
