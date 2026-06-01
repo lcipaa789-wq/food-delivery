@@ -3,12 +3,14 @@ import Header from "../components/Header";
 import ExploreMenu from "../components/ExploreMenu";
 import FoodDisplay from "../components/FoodDisplay";
 import AppDownload from "../components/AppDownload";
+import FoodAssistant from "../components/FoodAssistant";
 
 const Home = () => {
   const [category, setCategory] = useState("All");
   return (
     <div>
       <Header />
+      <FoodAssistant />
       <ExploreMenu category={category} setCategory={setCategory} />
       <FoodDisplay category={category} />
       <AppDownload />
