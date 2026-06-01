@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       {showLogin ? <LoginPoppup setShowLogin={setShowLogin} /> : <></>}
-      <div className="min-h-screen  w-4/5 mx-auto">
+      <div className="min-h-screen w-[92%] md:w-4/5 mx-auto">
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
           <Route path="/" element={<Home />} />

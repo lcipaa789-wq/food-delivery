@@ -1,4 +1,3 @@
-import React from "react";
 import { assets } from "../assets/assets";
 
 const AppDownload = () => {
@@ -11,7 +10,7 @@ const AppDownload = () => {
         For Better Experience Download <br />
         Tomato App
       </p>
-      <div className="flex justify-center gap-5 mt-10">
+      <div className="flex flex-wrap justify-center gap-5 mt-10">
         <img
           src={assets.play_store}
           alt=""

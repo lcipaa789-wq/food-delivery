@@ -69,7 +69,7 @@ const PlaceOrder = () => {
     <>
       <form
         onSubmit={placeOrder}
-        className="flex items-start justify-between gap-[80px] mt-[100px]"
+        className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-20 mt-25"
       >
         <div className="w-full max-w-[500px]">
           <p className="text-10 font-semibold mb-12.5 ">Delivery Information</p>
@@ -161,7 +161,7 @@ const PlaceOrder = () => {
             placeholder="Phone"
           />
         </div>
-        <div className="w-full max-w-[max(30%,500px)]">
+        <div className="w-full md:max-w-[max(30%,500px)]">
           <div className="flex-1 flex flex-col gap-5 ">
             <h2 className="text-10 font-semibold">Cart total</h2>
             <div>

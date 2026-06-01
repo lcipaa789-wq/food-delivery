@@ -1,4 +1,3 @@
-import React from "react";
 import { assets } from "../assets/assets";
 
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
       mt-25
       bg-[#323232]
       text-[#d9d9d9]
-      px-[8vw]
+      px-5 md:px-[8vw]
       pt-20
       pb-5
       "
@@ -17,8 +16,8 @@ const Footer = () => {
         <div
           className="
         grid
-        grid-cols-[2fr_1fr_1fr]
-        gap-20
+        grid-cols-1 md:grid-cols-[2fr_1fr_1fr]
+        gap-10 md:gap-20
         "
         >
           <div className="flex flex-col gap-5">
