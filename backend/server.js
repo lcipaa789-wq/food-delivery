@@ -10,7 +10,7 @@ import aiRouter from "./routes/aiRouter.js";
 
 //app config
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 //middleware
 app.use(express.json());
@@ -32,5 +32,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+  console.log(`Server started on ${port}`);
 });
