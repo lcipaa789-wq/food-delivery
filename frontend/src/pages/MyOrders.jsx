@@ -48,7 +48,10 @@ const MyOrders = () => {
 
               <p className="font-medium">${order.amount}.00</p>
 
-              <p>Items: {order.items.length}</p>
+              <p>
+                Items:{" "}
+                {order.items.reduce((total, item) => total + item.quantity, 0)}
+              </p>
 
               <p className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[tomato]"></span>
