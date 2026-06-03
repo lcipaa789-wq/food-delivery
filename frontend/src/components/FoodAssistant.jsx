@@ -59,7 +59,7 @@ const FoodAssistant = () => {
             </button>
           </div>
 
-          <div className="p-4 max-h-[420px] overflow-y-auto">
+          <div className="p-4 max-h-105 overflow-y-auto">
             <textarea
               value={message}
               onChange={(e) => {

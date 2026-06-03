@@ -8,10 +8,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
   return (
     <div className="w-full mx-auto rounded-2xl shadow-[0px_0px_10px_#00000015] transition-all duration-300 animate-fadeIn  hover:shadow-[0px_0px_20px_#000000020] cursor-pointer">
       <div className="relative  ">
-        <img
-          src={url + "/images/" + image}
-          className="w-full rounded-t-[15px]"
-        />
+        <img src={image} className="w-full rounded-t-[15px]" />
         {!cartItems[id] ? (
           <img
             className="w-8.75 absolute bottom-3.75 right-3.75 rounded-full "

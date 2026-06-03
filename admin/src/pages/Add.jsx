@@ -44,7 +44,6 @@ const Add = ({ url }) => {
   return (
     <div className="mt-12.5 ml-[max(5vw,25px)] w-[70%] text-[16px] text-[#6d6d6d]">
       <form className="flex flex-col gap-5" onSubmit={onSubmitHandler}>
-        {/* upload image */}
         <div className="flex flex-col gap-2.5">
           <p>Upload Image</p>
 

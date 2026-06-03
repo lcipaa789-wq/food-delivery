@@ -27,7 +27,7 @@ const List = ({ url }) => {
     }
   };
   return (
-    <div className="mt-[50px] ml-[max(5vw,25px)] w-[70%] text-[#6d6d6d]">
+    <div className="mt-12.5 ml-[max(5vw,25px)] w-[70%] text-[#6d6d6d]">
       <p className="mb-5 text-[22px] font-semibold text-[#333]">
         All Food List
       </p>
@@ -47,7 +47,7 @@ const List = ({ url }) => {
             className="grid grid-cols-5 items-center gap-4 border border-[#cacaca] px-4 py-3 text-[14px] text-[#555]"
           >
             <img
-              src={`${url}/images/${item.image}`}
+              src={item.image}
               alt=""
               className="h-[55px] w-[55px] rounded object-cover"
             />
