@@ -25,11 +25,7 @@ const Cart = () => {
               return (
                 <div key={index}>
                   <div className="grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] items-center text-[max(1vw,12px)] my-2.5 text-gray-800">
-                    <img
-                      className="w-12"
-                      src={url + "/images/" + item.image}
-                      alt=""
-                    />
+                    <img className="w-12" src={item.image} alt="" />
                     <p>{item.name}</p>
                     <p>${item.price}</p>
                     <p>{cartItems[item._id]}</p>
@@ -64,7 +60,9 @@ const Cart = () => {
             <hr className="my-2.5" />
             <div className="flex justify-between text-gray-600">
               <p>Total</p>
-              <p>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</p>
+              <p>
+                ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
+              </p>
             </div>
           </div>
           <button
