@@ -1,10 +1,23 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../context/StoreContext";
 import FoodItem from "./FoodItem";
+import { ClipLoader } from "react-spinners";
 
 const FoodDisplay = ({ category }) => {
-  const { food_list } = useContext(StoreContext);
-  // console.log(food_list);
+  const { food_list, foodLoading } = useContext(StoreContext);
+  if (foodLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center py-20">
+        <ClipLoader size={60} color="#f97316" />
+
+        <h2 className="mt-6 text-2xl font-semibold">Loading menu...</h2>
+
+        <p className="mt-2 text-gray-500">
+          Render backend is waking up. Please wait a few seconds.
+        </p>
+      </div>
+    );
+  }
   return (
     <div className="mt-7.5 " id="food-display">
       <h2 className="text-[max(2vw, 24px)] text-2xl ">Top dishe near you</h2>
